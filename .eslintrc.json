@@ -1,0 +1,103 @@
+/**
+ * @fileoverview eslint 配置文件
+ * @authors liyifei
+ * @date 2017/02
+ */
+{
+    // 运行环境
+    "env": {
+        "browser": true,
+        "commonjs": true
+    },
+    // 解析器选项
+    "parserOptions": {
+        // ecma 版本
+        "ecmaVersion": 5,
+        // 代码类型
+        "sourceType": "script",
+        // 语言特性
+        "ecmaFeatures": {
+            // 全局使用return
+            "globalReturn": true,
+            // strict mode
+            "impliedStrict": true,
+            // jsx 语法
+            "jsx": true,
+            "experimentalObjectRestSpread": false
+        }
+    },
+    // 扩展
+    // 继承推荐的规则
+    "extends": "eslint:recommended",
+    // 全局变量
+    "globals": {},
+    // 插件
+    "plugins": [
+        "react"
+    ],
+    // 规则
+    "rules": {
+        // 对 eslint 默认推荐规则修改
+        // 禁止使用 console - 警告
+        "no-console": ["warn"],
+        // 禁止 function 定义中出现重名参数 - 关闭
+        "no-dupe-args": ["off"],
+
+        // 自定义
+        // 禁用 alert - 禁止
+        "no-alert": ["error"],
+        // var 语句作用域范围 - 警告
+        "block-scoped-var": ["warn"],
+        // 判断语句复杂度，限制10圈 - 警告
+        "complexity": ["warn", 10],
+        // 语句大括号规则，所有语句不能省略大括号 - 警告
+        "curly": ["warn", "all"],
+        // switch 语句中必须有 default
+        "default-case": ["error"],
+        // 必须使用===和!==
+        "eqeqeq": ["error"],
+        // 禁止在 else 前有 return
+        "no-else-return": ["error"],
+        // 禁止出现空函数
+        "no-empty-function": ["error"],
+        // 禁用 eval()
+        "no-eval": ["error"],
+        // 禁用隐式的eval()
+        "no-implied-eval": ["error"],
+        // 禁止浮点小数
+        "no-floating-decimal": ["error"],
+        // 禁止 this 关键字在类或类对象之外出现
+        "no-invalid-this": ["error"],
+        // 禁止出现多个空格 - 警告
+        "no-multi-spaces": ["warn"],
+        // 禁止多行字符串
+        "no-multi-str": ["error"],
+        // 禁止对函数参数再赋值
+        "no-param-reassign": ["error"],
+        // 禁止在返回语句中赋值
+        "no-return-assign": ["error"],
+        // 禁止自身比较
+        "no-self-compare": ["error"],
+        // 禁用 with 语句
+        "no-with": ["error"],
+        // 要求必须有基数
+        "radix": ["warn"],
+
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
