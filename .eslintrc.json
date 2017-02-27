@@ -82,22 +82,55 @@
         "no-with": ["error"],
         // 要求必须有基数
         "radix": ["warn"],
+        // 变量必须在声明时初始化
+        "init-declarations": ["error"],
+        // 不允许初始化变量值为 undefined
+        "no-undef-init": ["error"],
+        // 不允许使用undefined变量
+        "no-undefined": ["error"],
+        // 禁止定义前使用
+        "no-use-before-define": ["error"],
 
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        // 个性化配置
+        // 大括号风格要求
+        // "brace-style": ["warn", "1tbs"],
+        // 驼峰命名变量 - 警告
+        "camelcase": ["warn"],
+        // 禁止使用拖尾逗号 - 警告
+        "comma-dangle": ["warn"],
+        // 强制在逗号周围使用空格 - 警告
+        "comma-spacing": ["warn", {"before": false, "after": true}],
+        // 强制文件末尾保留一行空行
+        "eol-last": ["error"],
+        // 强制使用一致的缩进
+        "indent": ["error", "tab"],
+        // 强制块语句的最大可嵌套深度 - 警告
+        "max-depth": ["warn", 4],
+        // 强制回调函数最大嵌套深度 - 警告
+        "max-nested-callbacks": ["warn", 4],
+        // 限制函数定义中最大参数个数
+        "max-params": ["warn", 5],
+        // 禁止 if 语句作为唯一语句出现在 else 语句块中
+        "no-lonely-if": ["error"],
+        // 禁止混合使用不同的操作符
+        "no-mixed-operators": ["warn"],
+        // 不允许多个空行，最多2行
+        "no-multiple-empty-lines": ["warn", 2],
+        // 禁用行尾空白
+        "no-trailing-spaces": ["error"],
+        // 强制在语句末尾使用分号
+        "semi": ["error", "always"],
+        // 强制使用一致的换行符风格
+        "linebreak-style": ["error", "unix"]
+
+        // 强制在关键字前后使用一致的空格
+        // 强制在对象字面量的属性中键和值之间使用一致的间距
+        // 强制注释的位置
+
+        // 强制使用一致的反勾号、双引号或单引号
+        // "quotes": [
+        //     "error",
+        //     "single"
+        // ],        
     }
 }
