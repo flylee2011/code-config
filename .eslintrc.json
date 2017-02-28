@@ -38,23 +38,29 @@
     // 规则
     "rules": {
         // 对 eslint 默认推荐规则修改
-        // 禁止使用 console - 警告
+        // 禁止使用 console
         "no-console": ["warn"],
-        // 禁止 function 定义中出现重名参数 - 关闭
+        // 禁止 function 定义中出现重名参数
         "no-dupe-args": ["off"],
 
-        // 自定义
-        // 禁用 alert - 禁止
-        "no-alert": ["error"],
-        // var 语句作用域范围 - 警告
+        // 自定义常用配置项
+        // 警告类
+        // var 语句作用域范围
         "block-scoped-var": ["warn"],
-        // 判断语句复杂度，限制10圈 - 警告
+        // 判断语句复杂度，限制10圈
         "complexity": ["warn", 10],
-        // 语句大括号规则，所有语句不能省略大括号 - 警告
+        // 语句大括号规则，所有语句不能省略大括号
         "curly": ["warn", "all"],
+        // 禁止出现多个空格
+        "no-multi-spaces": ["warn"],
+        // 要求必须有基数
+        "radix": ["warn"],
+        // 强制错误类
+        // 禁用 alert
+        "no-alert": ["error"],
         // switch 语句中必须有 default
         "default-case": ["error"],
-        // 必须使用===和!==
+        // 条件判断，必须使用===和!==
         "eqeqeq": ["error"],
         // 禁止在 else 前有 return
         "no-else-return": ["error"],
@@ -68,8 +74,6 @@
         "no-floating-decimal": ["error"],
         // 禁止 this 关键字在类或类对象之外出现
         "no-invalid-this": ["error"],
-        // 禁止出现多个空格 - 警告
-        "no-multi-spaces": ["warn"],
         // 禁止多行字符串
         "no-multi-str": ["error"],
         // 禁止对函数参数再赋值
@@ -80,42 +84,40 @@
         "no-self-compare": ["error"],
         // 禁用 with 语句
         "no-with": ["error"],
-        // 要求必须有基数
-        "radix": ["warn"],
-        // 变量必须在声明时初始化
+        // 变量必须在声明时初始化 - 待讨论
         "init-declarations": ["error"],
         // 不允许初始化变量值为 undefined
         "no-undef-init": ["error"],
         // 不允许使用undefined变量
         "no-undefined": ["error"],
-        // 禁止定义前使用
+        // 禁止定义前使用 - 待讨论
         "no-use-before-define": ["error"],
 
-        // 个性化配置
-        // 大括号风格要求
-        // "brace-style": ["warn", "1tbs"],
-        // 驼峰命名变量 - 警告
+        // 个性化配置，大多是主观内容
+        // 警告类
+        // 驼峰命名变量
         "camelcase": ["warn"],
-        // 禁止使用拖尾逗号 - 警告
+        // 禁止使用拖尾逗号
         "comma-dangle": ["warn"],
-        // 强制在逗号周围使用空格 - 警告
+        // 强制在逗号周围使用空格
         "comma-spacing": ["warn", {"before": false, "after": true}],
-        // 强制文件末尾保留一行空行
-        "eol-last": ["error"],
-        // 强制使用一致的缩进
-        "indent": ["error", "tab"],
-        // 强制块语句的最大可嵌套深度 - 警告
+        // 强制块语句的最大可嵌套深度
         "max-depth": ["warn", 4],
-        // 强制回调函数最大嵌套深度 - 警告
+        // 强制回调函数最大嵌套深度
         "max-nested-callbacks": ["warn", 4],
         // 限制函数定义中最大参数个数
         "max-params": ["warn", 5],
-        // 禁止 if 语句作为唯一语句出现在 else 语句块中
-        "no-lonely-if": ["error"],
         // 禁止混合使用不同的操作符
         "no-mixed-operators": ["warn"],
         // 不允许多个空行，最多2行
         "no-multiple-empty-lines": ["warn", 2],
+        // 强制类
+        // 强制文件末尾保留一行空行
+        "eol-last": ["error"],
+        // 强制使用一致的缩进，tab=4个空格
+        "indent": ["error", "tab"],
+        // 禁止 if 语句作为唯一语句出现在 else 语句块中
+        "no-lonely-if": ["error"],
         // 禁用行尾空白
         "no-trailing-spaces": ["error"],
         // 强制在语句末尾使用分号
@@ -123,14 +125,14 @@
         // 强制使用一致的换行符风格
         "linebreak-style": ["error", "unix"]
 
+        // 大括号风格要求
+        // "brace-style": ["warn", "1tbs"],
         // 强制在关键字前后使用一致的空格
+        // "keyword-spacing": ["warn", {"before": true, "after": true}],
+        // 禁止使用内联注释
+        // "no-inline-comments": ["warn"],
+        // // 强制使用一致的反勾号、双引号或单引号
+        // "quotes": ["error", "single"]
         // 强制在对象字面量的属性中键和值之间使用一致的间距
-        // 强制注释的位置
-
-        // 强制使用一致的反勾号、双引号或单引号
-        // "quotes": [
-        //     "error",
-        //     "single"
-        // ],        
     }
 }
