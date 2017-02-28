@@ -35,7 +35,9 @@
     "globals": {
         "$": true,
         "ga": true,
-        "LEPass": true
+        "LEPass": true,
+        "LETV": true,
+        "Job": true
     },
     // 插件
     "plugins": [
