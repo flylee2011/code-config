@@ -1,0 +1,6 @@
+# node_modules bower_components 默认被忽略
+dist/**/*
+build/**/*
+**/lib/**/*
+**/lithe.js
+**/config.js
