@@ -33,7 +33,9 @@
     "extends": "eslint:recommended",
     // 全局变量
     "globals": {
-        "$": true
+        "$": true,
+        "ga": true,
+        "LEPass": true
     },
     // 插件
     "plugins": [
@@ -52,16 +54,12 @@
         "no-mixed-spaces-and-tabs": 1,
 
         /* 强制错误类，！！！重要规则！！！ */
-        // 禁用 alert
-        "no-alert": 2,
         // 条件判断，必须使用===和!==
         "eqeqeq": 2,
         // switch 语句中必须有 default
         "default-case": 2,
         // 禁止在 else 前有 return
         "no-else-return": 2,
-        // 禁止出现空函数
-        "no-empty-function": 2,
         // 禁用 eval()
         "no-eval": 2,
         // 禁用隐式的eval()
@@ -78,7 +76,8 @@
         "no-undef-init": 2,
         // 不允许使用 undefined 变量
         "no-undefined": 2,
-
+        // 禁止出现空函数
+        "no-empty-function": 2,
         // 强制在语句末尾使用分号（主观）
         "semi": [2, "always"],
         // 禁止 if 语句作为唯一语句出现在 else 语句块中（主观）
@@ -87,11 +86,13 @@
         "linebreak-style": [2, "unix"],
 
         /* 警告类，次要规则 */
-        // 禁止定义前使用
+        // 禁用 alert
+        "no-alert": 1,
+        // 禁止变量定义前使用
         "no-use-before-define": 1,
         // 变量必须在声明时初始化
         "init-declarations": 1,
-        // var 语句作用域范围
+        // var 语句应该在块级作用域范围之内
         "block-scoped-var": 1,
         // 要求必须有基数
         "radix": 1,
@@ -99,12 +100,11 @@
         "curly": [1, "all"],
         // 判断语句复杂度，限制10圈
         "complexity": [1, 10],
-        // 禁止出现多个空格
-        "no-multi-spaces": 1,
         // 禁止对函数参数再赋值
         "no-param-reassign": 1,
-
-        // 强制使用一致的缩进，tab=4个空格（主观）
+        // 禁止出现多个空格
+        "no-multi-spaces": 1,
+        // 强制使用一致的缩进，使用空格缩进，1个tab=4个空格（主观）
         "indent": [1, "tab"],
         // 驼峰命名变量（主观）
         "camelcase": 1,
@@ -112,7 +112,7 @@
         "comma-dangle": 1,
         // 禁用行尾空白（主观）
         "no-trailing-spaces": 1,
-        // 强制在逗号周围使用空格（主观）
+        // 强制在逗号周围使用空格，只在逗号后加空格（主观）
         "comma-spacing": [1, {"before": false, "after": true}],
         // 强制块语句的最大可嵌套深度（主观）
         "max-depth": [1, {"max": 4}],
@@ -126,15 +126,5 @@
         "no-multiple-empty-lines": [1, {"max": 2}],
         // 文件末尾保留一行空行（主观）
         "eol-last": 1
-        // // 大括号风格要求（主观）
-        // "brace-style": [1, "1tbs"],
-        // // 强制在关键字前后使用一致的空格（主观）
-        // "keyword-spacing": [1, {"before": true, "after": true}],
-        // // 强制使用一致的反勾号、双引号或单引号（主观）
-        // "quotes": [2, "single"]
-        // // 禁止使用内联注释（主观）
-        // "no-inline-comments": 1,
-        // // 要求或禁止在注释前有空白（主观）
-        // "spaced-comment": 1,
     }
 }
