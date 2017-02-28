@@ -1,7 +1,7 @@
 {
-  "name": "sample-eslint",
+  "name": "eslint-config",
   "version": "1.0.0",
-  "description": "",
+  "description": "A example of eslint config",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

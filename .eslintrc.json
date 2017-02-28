@@ -39,100 +39,100 @@
     "rules": {
         // 对 eslint 默认推荐规则修改
         // 禁止使用 console
-        "no-console": ["warn"],
-        // 禁止 function 定义中出现重名参数
-        "no-dupe-args": ["off"],
+        "no-console": 1,
+        // 禁止 function 定义中出现重名参数 - 关闭
+        "no-dupe-args": 0,
 
         // 自定义常用配置项
         // 警告类
         // var 语句作用域范围
-        "block-scoped-var": ["warn"],
+        "block-scoped-var": 1,
         // 判断语句复杂度，限制10圈
-        "complexity": ["warn", 10],
+        "complexity": [1, 10],
         // 语句大括号规则，所有语句不能省略大括号
-        "curly": ["warn", "all"],
+        "curly": [1, "all"],
         // 禁止出现多个空格
-        "no-multi-spaces": ["warn"],
+        "no-multi-spaces": 1,
         // 要求必须有基数
-        "radix": ["warn"],
+        "radix": 1,
         // 强制错误类
         // 禁用 alert
-        "no-alert": ["error"],
+        "no-alert": 2,
         // switch 语句中必须有 default
-        "default-case": ["error"],
+        "default-case": 2,
         // 条件判断，必须使用===和!==
-        "eqeqeq": ["error"],
+        "eqeqeq": 2,
         // 禁止在 else 前有 return
-        "no-else-return": ["error"],
+        "no-else-return": 2,
         // 禁止出现空函数
-        "no-empty-function": ["error"],
+        "no-empty-function": 2,
         // 禁用 eval()
-        "no-eval": ["error"],
+        "no-eval": 2,
         // 禁用隐式的eval()
-        "no-implied-eval": ["error"],
+        "no-implied-eval": 2,
         // 禁止浮点小数
-        "no-floating-decimal": ["error"],
+        "no-floating-decimal": 2,
         // 禁止 this 关键字在类或类对象之外出现
-        "no-invalid-this": ["error"],
+        "no-invalid-this": 2,
         // 禁止多行字符串
-        "no-multi-str": ["error"],
+        "no-multi-str": 2,
         // 禁止对函数参数再赋值
-        "no-param-reassign": ["error"],
+        "no-param-reassign": 2,
         // 禁止在返回语句中赋值
-        "no-return-assign": ["error"],
+        "no-return-assign": 2,
         // 禁止自身比较
-        "no-self-compare": ["error"],
+        "no-self-compare": 2,
         // 禁用 with 语句
-        "no-with": ["error"],
+        "no-with": 2,
         // 变量必须在声明时初始化 - 待讨论
-        "init-declarations": ["error"],
+        "init-declarations": 2,
         // 不允许初始化变量值为 undefined
-        "no-undef-init": ["error"],
+        "no-undef-init": 2,
         // 不允许使用undefined变量
-        "no-undefined": ["error"],
+        "no-undefined": 2,
         // 禁止定义前使用 - 待讨论
-        "no-use-before-define": ["error"],
+        "no-use-before-define": 2,
 
         // 个性化配置，大多是主观内容
         // 警告类
         // 驼峰命名变量
-        "camelcase": ["warn"],
+        "camelcase": 1,
         // 禁止使用拖尾逗号
-        "comma-dangle": ["warn"],
+        "comma-dangle": 1,
         // 强制在逗号周围使用空格
-        "comma-spacing": ["warn", {"before": false, "after": true}],
+        "comma-spacing": [1, {"before": false, "after": true}],
         // 强制块语句的最大可嵌套深度
-        "max-depth": ["warn", 4],
+        "max-depth": [1, 4],
         // 强制回调函数最大嵌套深度
-        "max-nested-callbacks": ["warn", 4],
+        "max-nested-callbacks": [1, 4],
         // 限制函数定义中最大参数个数
-        "max-params": ["warn", 5],
+        "max-params": [1, 5],
         // 禁止混合使用不同的操作符
-        "no-mixed-operators": ["warn"],
+        "no-mixed-operators": 1,
         // 不允许多个空行，最多2行
-        "no-multiple-empty-lines": ["warn", 2],
+        "no-multiple-empty-lines": [1, 2],
         // 强制类
         // 强制文件末尾保留一行空行
-        "eol-last": ["error"],
+        "eol-last": 2,
         // 强制使用一致的缩进，tab=4个空格
-        "indent": ["error", "tab"],
+        "indent": [2, "tab"],
         // 禁止 if 语句作为唯一语句出现在 else 语句块中
-        "no-lonely-if": ["error"],
+        "no-lonely-if": 2,
         // 禁用行尾空白
-        "no-trailing-spaces": ["error"],
+        "no-trailing-spaces": 2,
         // 强制在语句末尾使用分号
-        "semi": ["error", "always"],
+        "semi": [2, "always"],
         // 强制使用一致的换行符风格
-        "linebreak-style": ["error", "unix"]
+        "linebreak-style": [2, "unix"]
 
         // 大括号风格要求
-        // "brace-style": ["warn", "1tbs"],
+        // "brace-style": [1, "1tbs"],
         // 强制在关键字前后使用一致的空格
-        // "keyword-spacing": ["warn", {"before": true, "after": true}],
+        // "keyword-spacing": [1, {"before": true, "after": true}],
         // 禁止使用内联注释
-        // "no-inline-comments": ["warn"],
+        // "no-inline-comments": 1,
         // // 强制使用一致的反勾号、双引号或单引号
-        // "quotes": ["error", "single"]
+        // "quotes": [2, "single"]
         // 强制在对象字面量的属性中键和值之间使用一致的间距
     }
 }
