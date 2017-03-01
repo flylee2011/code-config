@@ -16,3 +16,5 @@ build/**/*
 # lithe 加载器代码
 **/lithe.js
 **/config.js
+# 压缩文件
+**/.min.js

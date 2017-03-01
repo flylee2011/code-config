@@ -1,2 +1,2 @@
 # eslint-config
-A example of eslint config
+ESLint config for team code.
