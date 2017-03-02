@@ -5,13 +5,13 @@
  */
 {
     // 字号
-	"font_size": 16,
-	// 1个 tab 等于4个空格
-	"tab_size": 4,
+    "font_size": 16,
+    // 1个 tab 等于4个空格
+    "tab_size": 4,
     // 用空格代替 tab
-	"translate_tabs_to_spaces": true,
-	// 显示行号
-	"line_numbers": true,
+    "translate_tabs_to_spaces": true,
+    // 显示行号
+    "line_numbers": true,
     // 空白字符显示方式 - 全部显示
     "draw_white_space": "all",
     // 保存时删除尾随空格
@@ -21,8 +21,7 @@
     // 高亮光标所在行
     "highlight_line": true,
     // 忽略的插件
-	"ignored_packages":
-	[
-		"Vintage"
-	]
+    "ignored_packages": [
+        "Vintage"
+    ]
 }

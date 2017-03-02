@@ -7,7 +7,7 @@
 {
     // 字号
     "editor.fontSize": 16,
-    // 一个 tab 等于4个空格
+    // 1个 tab 等于4个空格
     "editor.tabSize": 4,
     // 用空格替代 tab
     "editor.insertSpaces": true,
@@ -29,7 +29,7 @@
     "editor.scrollBeyondLastLine": false,
     // git 工具开关
     "git.enabled": true,
-    // ESLint 配置
+    // ESLint 配置（该项根据实际目录配置）
     "eslint.options": {
         "configFile": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintrc.json",
         "ignorePath": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintignore"
