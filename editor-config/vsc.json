@@ -15,16 +15,18 @@
     "editor.lineNumbers": "on",
     // 空白字符显示方式 - 全部显示
     "editor.renderWhitespace": "all",
-    // 缩进参考线
-    "editor.renderIndentGuides": true,
     // 删除尾随自动插入的空格
     "editor.trimAutoWhitespace": true,
+    // 保存时删除尾随空格
+    "files.trimTrailingWhitespace": true,
+    // 保存时文件末尾插入新行
+    "files.insertFinalNewline": true,
+    // 高亮光标所在行
+    "editor.renderLineHighlight": "all",
+    // 缩进参考线
+    "editor.renderIndentGuides": true,
     // 控制编辑器是否可以滚动到最后一行之后 - 否
     "editor.scrollBeyondLastLine": false,
-    // 保存时去掉尾随空格
-    "files.trimTrailingWhitespace": true,
-    // 文件末尾插入新行
-    "files.insertFinalNewline": true,
     // git 工具开关
     "git.enabled": true,
     // ESLint 配置
