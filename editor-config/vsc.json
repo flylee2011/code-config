@@ -1,0 +1,37 @@
+/**
+ * @fileoverview visual studio code 常用配置
+ * @authors liyifei
+ * @data 2017/03
+ */
+// 将设置放入此文件中以覆盖默认设置
+{
+    // 字号
+    "editor.fontSize": 16,
+    // 一个 tab 等于4个空格
+    "editor.tabSize": 4,
+    // 用空格替代 tab
+    "editor.insertSpaces": true,
+    // 显示行号
+    "editor.lineNumbers": "on",
+    // 空白字符显示方式 - 全部显示
+    "editor.renderWhitespace": "all",
+    // 缩进参考线
+    "editor.renderIndentGuides": true,
+    // 删除尾随自动插入的空格
+    "editor.trimAutoWhitespace": true,
+    // 控制编辑器是否可以滚动到最后一行之后 - 否
+    "editor.scrollBeyondLastLine": false,
+    // 保存时去掉尾随空格
+    "files.trimTrailingWhitespace": true,
+    // 文件末尾插入新行
+    "files.insertFinalNewline": true,
+    // git 工具开关
+    "git.enabled": true,
+    // ESLint 配置
+    "eslint.options": {
+        "configFile": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintrc.json",
+        "ignorePath": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintignore"
+    },
+    // 窗口缩放 - 关闭
+    "window.zoomLevel": 0
+}
