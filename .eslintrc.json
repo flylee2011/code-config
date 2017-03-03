@@ -97,20 +97,20 @@
         "complexity": [2, 10],
         // 强制在语句末尾使用分号（主观）
         "semi": [2, "always"],
-        // 禁止 if 语句作为唯一语句出现在 else 语句块中（主观）
-        "no-lonely-if": 2,
         // 禁止使用拖尾逗号（主观）
         "comma-dangle": 2,
         // 强制块语句的最大可嵌套深度（主观）
         "max-depth": [2, {"max": 6}],
         // 强制回调函数最大嵌套深度（主观）
         "max-nested-callbacks": [2, {"max": 4}],
-        // 限制函数定义中最大参数个数，最多3个，超出要用 object 实现（主观）
-        "max-params": [2, {"max": 3}],
+        // 限制函数定义中最大参数个数，最多5个，超出要用 object 实现（主观）
+        "max-params": [2, {"max": 5}],
         // 强制使用一致的换行符风格（主观）
         "linebreak-style": [2, "unix"],
 
         /* 警告类，！！！待加入！！！ */
+        // 禁止 if 语句作为唯一语句出现在 else 语句块中（主观）
+        "no-lonely-if": 1,
         // 强制使用一致的缩进，使用空格缩进，1个tab=4个空格（主观）
         "indent": [1, 4],
         // 驼峰命名变量（主观）
@@ -123,7 +123,6 @@
         "no-empty-function": 1,
         // 禁用 alert
         "no-alert": 1
-
         // 禁止对函数参数再赋值（重要）
         // "no-param-reassign": 1
     }
