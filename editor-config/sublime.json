@@ -4,23 +4,23 @@
  * @data 2017/03
  */
 {
-    // 字号
-    "font_size": 16,
     // 1个 tab 等于4个空格
     "tab_size": 4,
     // 用空格代替 tab
     "translate_tabs_to_spaces": true,
     // 显示行号
     "line_numbers": true,
-    // 空白字符显示方式 - 全部显示
-    "draw_white_space": "all",
     // 保存时删除尾随空格
     "trim_trailing_white_space_on_save": true,
     // 保存时文件末尾插入新行
     "ensure_newline_at_eof_on_save": true,
+    // 空白字符显示方式 - 全部显示
+    "draw_white_space": "all",
     // 高亮光标所在行
     "highlight_line": true,
-    // 忽略的插件
+    // 字号（主观）
+    "font_size": 16,
+    // 忽略的插件（ST 独有）
     "ignored_packages": [
         "Vintage"
     ]
