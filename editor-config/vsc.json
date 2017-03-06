@@ -21,6 +21,17 @@
     "editor.renderWhitespace": "all",
     // 高亮光标所在行
     "editor.renderLineHighlight": "all",
+    // js-beautify 代码格式化配置文件（该项目根据实际目录配置）
+    "beautify.config": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.jsbeautifyrc.json",
+    // 关闭 vsc 自带的格式化
+    "javascript.format.enable": false,
+    // 启用保存文件自动格式化
+    "editor.formatOnSave": true,
+    // ESLint 配置（该项根据实际目录配置）
+    "eslint.options": {
+        "configFile": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintrc.json",
+        "ignorePath": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintignore"
+    },
     // 字号（主观）
     "editor.fontSize": 16,
     // 缩进参考线（主观）
@@ -29,11 +40,6 @@
     "editor.scrollBeyondLastLine": false,
     // git 工具开关（VSC 独有）
     "git.enabled": true,
-    // ESLint 配置（该项根据实际目录配置）
-    "eslint.options": {
-        "configFile": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintrc.json",
-        "ignorePath": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/config/eslint-config/.eslintignore"
-    },
     // 窗口缩放 - 关闭
     "window.zoomLevel": 0
 }

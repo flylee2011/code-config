@@ -14,7 +14,7 @@ var timer = setInterval(function() {
 
 // 禁止在嵌套的块中出现变量声明或 function 声明 - no-inner-declarations
 // /qiandao-platform/app/js/mods/mobile/newList.js
-if(li.length > 3){
+if (li.length > 3) {
     var li0 = li.eq(0).clone();
     var li1 = li.eq(1).clone();
     var li2 = li.eq(2).clone();
@@ -67,8 +67,8 @@ if (n <= 11) {
 // 禁止使用拖尾逗号（主观）- comma-dangle
 // /qiandao-platform/app/js/mods/mobile/qiandao.js
 var res = [{
-    username : '杨志航1',
-    prize : '手机1S',
+    username: '杨志航1',
+    prize: '手机1S',
 }]
 
 // 限制函数定义中最大参数个数，最多3个，超出要用 object 实现（主观）- max-params（个数？）
@@ -84,7 +84,7 @@ var foo = 2;
 
 // 禁止不必要的分号 - no-extra-semi
 // /qiandao-platform/app/js/mods/mobile/recommendList
-function RecommendListObj(){
+function RecommendListObj() {
     // ...
 };
 
@@ -101,6 +101,7 @@ alert(a);
 var a = 10;
 
 f();
+
 function f() {
     // ...
 }
