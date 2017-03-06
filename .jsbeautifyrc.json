@@ -3,12 +3,12 @@
     // 缩进4个空格
     "indent_size": 4,
     "indent_char": " ",
+    // 不用 tab 缩进
+    "indent_with_tabs": false,
     // unix 换行符
     "eol": "\n",
     // 缩进级别
     "indent_level": 0,
-    // 不用 tab 缩进
-    "indent_with_tabs": false,
     // 保留空行，在一个代码块最大保留3个空行
     "preserve_newlines": true,
     "max_preserve_newlines": 3,
@@ -19,20 +19,16 @@
 
     // HTML
     "html": {
-        "brace_style": "collapse",
-        // 缩进 head body
+        // Set brace_style
+        "brace_style": "none",
+        // 缩进 <head> <body>
         "indent_inner_html": false,
         // script 代码缩进
-        "indent_scripts": "keep",
+        "indent_scripts": "normal",
         // 属性缩进
         "wrap_attributes": "auto",
-        "wrap_attributes_indent_size": "indent-size",
-        // 设置某些标签，不需要格式化
-        // "unformatted": "",
-        // 设置某些标签，内容不需要格式化
-        "content_unformatted": "pre",
-        // 设置某些标签，添加额外空行
-        "extra_liners": "head,body,html"
+        // 设置某些标签，添加额外空行 - 默认head,body,/html
+        "extra_liners": ""
     },
 
     // CSS
@@ -45,22 +41,25 @@
 
     // JS
     "js": {
-        // 关闭 jslint 严格模式
-        "jslint_happy": false,
-        // 匿名函数后不加空格
+        // 括号两边的空格 - f( a, b ) vs f(a, b)
+        "space_in_paren": false,
+        // 空括号两边的空格 - f(  ) vs f()
+        "space_in_empty_paren": false,
+        // 匿名函数后的空格 - function () vs function()
         "space_after_anon_function": false,
+        // 条件判断前的空格 - if () vs if()
+        "space_before_conditional": true,
         // 数组缩进
         "keep_array_indentation": false,
-        // 函数缩进
-        "keep_function_indentation": false,
-        // 条件判断前加空格
-        "space_before_conditional": true,
         // 不允许用 eval
         "eval_code": false,
-        // Put braces on the same line as control statements
+        // 关闭 jslint 严格模式
+        "jslint_happy": false,
+        // Set brace_style
         "brace_style": "collapse",
         // Break chained method calls across subsequent lines
         "break_chained_methods": false,
+        // Decode printable characters encoded in xNN notation
         "unescape_strings": false
     }
 }
