@@ -1,3 +1,5 @@
+// js-beautify 代码格式化配置
+// 官网、文档：http://jsbeautifier.org/, https://github.com/beautify-web/js-beautify
 {
     // 通用
     // 缩进4个空格
@@ -7,40 +9,17 @@
     "indent_with_tabs": false,
     // unix 换行符
     "eol": "\n",
-    // 缩进级别
-    "indent_level": 0,
-    // 保留空行，在一个代码块最大保留3个空行
+    // 保留空行
     "preserve_newlines": true,
-    "max_preserve_newlines": 3,
     // 文件结尾加一行空行
     "end_with_newline": true,
-    // 换行长度，0-关闭
-    "wrap_line_length": 0,
-
-    // HTML
-    "html": {
-        // Set brace_style
-        "brace_style": "none",
-        // 缩进 <head> <body>
-        "indent_inner_html": false,
-        // script 代码缩进
-        "indent_scripts": "normal",
-        // 属性缩进
-        "wrap_attributes": "auto",
-        // 设置某些标签，添加额外空行 - 默认head,body,/html
-        "extra_liners": ""
-    },
-
-    // CSS
-    "css": {
-        // 在规则之间添加换行 - 关闭
-        "newline_between_rules": false,
-        // 在选择器之间添加换行 - 关闭
-        "selector_separator_newline": false
-    },
 
     // JS
     "js": {
+        // 大括号方式 - 在当前行
+        "brace_style": "collapse",
+        // 缩进级别
+        "indent_level": 0,
         // 括号两边的空格 - f( a, b ) vs f(a, b)
         "space_in_paren": false,
         // 空括号两边的空格 - f(  ) vs f()
@@ -55,11 +34,39 @@
         "eval_code": false,
         // 关闭 jslint 严格模式
         "jslint_happy": false,
+        // 换行长度，0-关闭
+        "wrap_line_length": 0,
+        // 在一个代码块最大保留3个空行
+        "max_preserve_newlines": 3,
+        // 链式调用方法换行 - 不换行
+        "break_chained_methods": false,
+        // 解码字符编码 - 不解码
+        "unescape_strings": false
+    },
+
+    // HTML
+    "html": {
         // Set brace_style
         "brace_style": "collapse",
-        // Break chained method calls across subsequent lines
-        "break_chained_methods": false,
-        // Decode printable characters encoded in xNN notation
-        "unescape_strings": false
+        // 缩进 <head> <body>
+        "indent_inner_html": false,
+        // script 代码缩进
+        "indent_scripts": "normal",
+        // 属性缩进
+        "wrap_attributes": "auto",
+        // 设置某些标签，添加额外空行 - 默认head,body,/html
+        "extra_liners": "",
+        // 在一个代码块最大保留3个空行
+        "max_preserve_newlines": 3,
+        // 换行长度，0-关闭
+        "wrap_line_length": 0
+    },
+
+    // CSS
+    "css": {
+        // 在规则之间添加换行 - 关闭
+        "newline_between_rules": false,
+        // 在选择器之间添加换行 - 关闭
+        "selector_separator_newline": false
     }
 }
