@@ -21,8 +21,12 @@
     "editor.renderWhitespace": "all",
     // 高亮光标所在行
     "editor.renderLineHighlight": "all",
-    // js-beautify 代码格式化配置文件（该项目根据实际目录配置）
+    // beautify插件配置
+    // 代码格式化配置文件（该项目根据实际目录配置）
     "beautify.config": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.jsbeautifyrc.json",
+    "beautify.language": {
+        "css": []
+    },
     // 关闭 vsc 自带的格式化
     "javascript.format.enable": false,
     // 启用保存文件自动格式化

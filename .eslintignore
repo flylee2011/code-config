@@ -10,8 +10,10 @@ build/**/*
 # 第三方代码目录
 **/vendor/**/*
 # letv 老代码
+**/LTK.js
 **/abc.js
 **/letv_core.js
+**/letv_analytics.js
 # lithe 加载器代码
 **/lithe.js
 **/config.js
