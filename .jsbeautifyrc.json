@@ -14,9 +14,9 @@
     // 文件结尾加一行空行
     "end_with_newline": true,
 
-    // JS
+    // JS, JSON
     "js": {
-        // 大括号方式 - 在当前行
+        // 大括号方式 - 折叠形式
         "brace_style": "collapse",
         // 缩进级别
         "indent_level": 0,
