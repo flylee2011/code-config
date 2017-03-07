@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> HTML 规范</title>
+</head>
+<body>
+	<h1>HTML 规范</h1>
+	<h2>1. DOCTYPE 位置</h2>
+	<p>
+		&lt;DOCTYPE html &gt; 必须在文档的最开始，避免引起文档的怪异渲染模式。
+	</p>
+	<h2>2. 移动端的 meta 值</h2>
+	<p>
+	&lt;meta charset="utf-8"&gt;<br />
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;<br />
+	&lt;meta content="email=no" name="format-detection" /&gt;<br />
+	&lt;meta name="format-detection" content="telephone=no" /&gt;
+	</p>
+	<h2>3. PC 端 IE edge</h2>
+	<p>
+		&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt; 。
+	</p>
+	<h2>4. 标签闭合</h2>
+	<p>基础要求。</p>
+	<h2>5. 不使用 inline 样式。</h2>
+	<p>
+		禁止在页面的head通过 &lt;style&gt; 定义样式，和在 dom 中通过使用 style 的方式定义 inline 样式。
+	</p>
+	<h2>6. 4个空格缩进</h2>
+	<p>使用4个空格代替制表符缩进。</p>
+	<h2>7. 注释规则</h2>
+	<p>模块通过 &lt;-- 模块名字 -- &gt; 开始，&lt;-- /模块名字 -- &gt 结束，状态切换注释在DOM切换处注释标注。</p>
+</body>
+</html>
