@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>CSS 开发规则</title>
+            <style>
+                pre{display:block;padding:10px;border: 1px solid #f0f0f0;background:#5875bc;color:#fff;}
+            </style>
+    </head>
+    <body>
+        <h1>CSS 开发规则</h1>
+        <h2>严禁使用 !important </h2>
+/* The !important annotation is used to artificially increase the specificity of a given property value in a rule. This is usually an indication that the specificity of the entire CSS has gotten a bit out of control and needs to be refactored. The more frequently !important is found in CSS, the more likely it is that developers are having trouble styling parts of a page effectively. */
+        <div>
+<pre>
+.mybox {
+    color: red !important;
+}
+</pre>
+        </div>
+        <h2>避免使用交集选择器 adjoining-classes</h2>
+        <div>
+<pre>
+.foo {
+    font-weight: bold;
+}
+
+.bar {
+    padding: 10px;
+}
+
+.foo.bar {
+    color: red;
+}
+    /*可以新增样式*/
+    .baz{
+        color:red;
+    }
+</pre>
+        </div>
+    <h2>使用已知的属性值 known-properties</h2>
+<div>
+<pre>
+/* clr isn't a known property */
+a {
+    clr: red;
+}
+
+/* 'foo' isn't a valid color */
+a {
+    color: foo;
+}
+</pre>
+</div>
+    <h2>注意使用盒模型尺寸 box-sizing</h2>
+<div>
+<pre>
+/* 盒模型的宽高默认是内容区域 content-box,注意使用后的宽高变化 */
+.mybox {
+    border: 1px solid black;
+    padding: 5px;
+    width: 100px;
+}
+.mybox {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 5px;
+    width: 100px;
+}
+</pre>
+</div>
+<h2>不要过度定义</h2>
+<div>
+<pre>
+div.mybox {
+    color: red;
+}
+
+.mybox li.active {
+    background: red;
+}
+</pre>
+</div>
+<h2>display多属性组合</h2>
+<div>
+<pre>
+/*display-property-groupin*/
+/*
+display: inline used with width, height, margin, margin-top, margin-bottom, and float.
+display: inline-block used with float.
+display: block used with vertical-align.
+display: table-* used with margin (and all variants) or float.
+*/
+/* 下面会引发警告 */
+/* inline with height */
+.mybox {
+    display: inline;
+    height: 25px;
+}
+
+/* inline-block with float */
+.mybox {
+    display: inline-block;
+    float: left;
+}
+
+/* table-cell and margin */
+.mybox {
+    display: table-cell;
+    margin: 10px;
+}
+/* 下面的属性是合适的 */
+/* inline with margin-left */
+.mybox {
+    display: inline;
+    margin-left: 10px;
+}
+
+/* table and margin */
+.mybox {
+    display: table;
+    margin-bottom: 10px;
+}
+</pre>
+</div>
+
+<h2>font face </h2>
+<div>
+<pre>
+/*
+    使用多个字体格式时，在旧的 IE版本中会引发 404，我们需要使用查询字符串在修正
+*/
+/* 下面会引起低版本的 IE 浏览器报404错误 */
+@font-face {
+    font-family: 'MyFontFamily';
+    src: url('myfont-webfont.eot') format('embedded-opentype'),
+        url('myfont-webfont.woff') format('woff'),
+        url('myfont-webfont.ttf')  format('truetype'),
+        url('myfont-webfont.svg#svgFontName') format('svg');
+}
+/*修正方法 增加查询字符*/
+@font-face {
+    font-family: 'MyFontFamily';
+    src: url('myfont-webfont.eot?#iefix') format('embedded-opentype'),
+        url('myfont-webfont.woff') format('woff'),
+        url('myfont-webfont.ttf')  format('truetype'),
+        url('myfont-webfont.svg#svgFontName') format('svg');
+}
+</pre>
+</div>
+<h2>浏览器前缀</h2>
+<div>
+<pre>
+/*下面这些属性需要浏览器前缀，如果没有前缀会有警告
+animation
+animation-delay
+animation-direction
+animation-duration
+animation-fill-mode
+animation-iteration-count
+animation-name
+animation-play-state
+animation-timing-function
+appearance
+border-end
+border-end-color
+border-end-style
+border-end-width
+border-image
+border-radius
+border-start
+border-start-color
+border-start-style
+border-start-width
+box-align
+box-direction
+box-flex
+box-lines
+box-ordinal-group
+box-orient
+box-pack
+box-sizing
+box-shadow
+column-count
+column-gap
+column-rule
+column-rule-color
+column-rule-style
+column-rule-width
+column-width
+hyphens
+line-break
+margin-end
+margin-start
+marquee-speed
+marquee-style
+padding-end
+padding-start
+tab-size
+text-size-adjust
+transform
+transform-origin
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function
+user-modify
+user-select
+word-break
+writing-mode
+*/
+</pre>
+</div>
+<h2>禁止使用正则表达式的选择符</h2>
+<div>
+<pre>
+/* css3 增加了复杂的属性值选择符让你通过使用正则表达式寻找匹配的属性值的选择符，这会引发性能问题。 */
+/* OK */
+a[rel=external] {
+    color: blue;
+}
+a[href*=yahoo.com] {
+    color: green;
+}
+
+/* 第一种情况 包含  *=  */
+a[href*=yahoo.com] {
+    color: green;
+}
+/* 下面所有的形式都会匹配 */
+/*
+&lt;a href="http://www.yahoo.com/"&gt;Yahoo!&lt;/a&gt;
+&lt;a href="http://www.google.com/redirect=www.yahoo.com"&gt;Redirect to Yahoo!&lt;/a&gt;
+&lt;a href="http://login.yahoo.com/"&gt;Login to Yahoo!&lt;/a&gt;
+*/
+/* 第二种情况 以关键字开始  ^=  */
+a[rel^=ext] {
+    color: red;
+}
+
+/* 会匹配下面的形式 */
+/*
+&lt;a href="http://www.example.com" rel="external"&gt;Example&lt;/a&gt;
+&lt;a rel="extra"&gt;Extra! Extra!&lt;/a&gt;
+&lt;a rel="extreme"&gt;Extreme&lt;/a&gt;
+*/
+/* 第三种情况 以关键字结束  $=  */
+a[href$=.html] {
+    color: blue;
+}
+/*  下面的都会匹配
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="http://www.example.com/example.html"&gt;Example&lt;/a&gt;
+*/
+/* 第四种情况 文字匹配  ~=  */
+a[rel~=external] {
+    color: red;
+}
+/*
+&lt;a href="http://www.example.com" rel="external"&gt;Example&lt;/a&gt;
+&lt;a href="http://www.example.com" rel="external me"&gt;Example&lt;/a&gt;
+&lt;a href="http://www.example.com" rel="reference external"&gt;Example&lt;/a&gt;
+&lt;a href="http://www.example.com" rel="friend external me"&gt;Example&lt;/a&gt;
+*/
+
+/* 第五种情况 关键字被横线分隔 Dashes  ~=  */
+a[data-info|=name] {
+    color: red;
+}
+/*
+会匹配下面的情况
+&lt;a data-info="name-address-phone"&gt;Info&lt;/a&gt;
+&lt;a data-info="address-name-phone"&gt;Info&lt;/a&gt;
+&lt;a data-info="address-phone-name"&gt;Info&lt;/a&gt;
+*/
+</pre>
+</div>
+
+<h2>重复定义背景</h2>
+<div>
+<pre>
+/* 尽可能减少文件大小，多次引用一个 url 会出警告 */
+.heart-icon {
+    background: url(sprite.png) -16px 0 no-repeat;
+}
+
+.task-icon {
+    background: url(sprite.png) -32px 0 no-repeat;
+}
+</pre>
+</div>
+<h2>对一个属性多次定义</h2>
+<div>
+<pre>
+.mybox {
+    width: 100px;
+    width: 120px;
+}
+/* properties with the diffrent value */
+.mybox {
+    border: 1px solid black;
+    border: 1px solid red;
+}
+</pre>
+</div>
+<h2>严禁使用空规则</h2>
+<div>
+<pre>
+.foo {
+    /*comment*/
+}
+</pre>
+</div>
+<h2>渐变需要满足所有情况</h2>
+<div>
+<pre>
+/*
+-ms-linear-gradient and -ms-radial-gradient for Internet Explorer 10+
+-moz-linear-gradient and -moz-radial-gradient for Firefox 3.6+
+-o-linear-gradient and -o-radial-gradient for Opera 11.10+
+-webkit-linear-gradient and -webkit-radial-gradient for Safari 5+ and Chrome
+-webkit-gradient for Safari 4+ and Chrome (aka "Old WebKit")
+*/
+
+div{
+    background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #1e5799 0%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #1e5799 0%,#7db9e8 100%); /* IE10+ */
+}
+
+/* Missing -moz, -ms, and -o */
+.mybox {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
+}
+
+/* Missing old and new -webkit */
+.mybox {
+    background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);
+    background: -o-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
+    background: -ms-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
+}
+
+.mybox {
+    background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
+    background: -o-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
+    background: -ms-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
+}
+</pre>
+</div>
+<h2>颜色降级</h2>
+<div>
+<pre>
+/* 颜色的表达方式 16进制  颜色名称 rgba hsla  */
+.box {
+    background: #000;
+    color: rgba(100, 100, 200, 0.5); /*低级浏览器无效*/
+}
+.box {
+    background: #000;
+    color: blue; /*降级方案*/
+    color: rgba(100, 100, 200, 0.5);
+}
+    </pre>
+</div>
+<h2>不要有太多的字号声明，一个站点中一般定义好一组</h2>
+<div>
+<pre>
+/* 这种情况在响应式页面中可能不适用 */
+.small {
+    font-size: 8px;
+}
+
+.medium {
+    font-size: 11px;
+}
+
+.large {
+    font-size: 14px;
+}
+</pre>
+</div>
+<h2>避免使用星号 star hack 和 underscore</h2>
+<div>
+<pre>
+.mybox {
+    border: 1px solid black;
+    padding: 5px;
+    width: 100px;
+    *width: 200px;
+}
+.mybox {
+    border: 1px solid black;
+    padding: 5px;
+    width: 100px;
+    _width: 200px;
+}
+</pre>
+</div>
+
+<h2>禁止使用 outline:none</h2>
+<div>
+<pre>
+/* outline:none 影响可访问性，如果移除 outline，可以有替代方案 */
+a:focus {
+    border: 1px solid red;
+    outline: none;
+}
+</pre>
+</div>
+<h2>禁止使用 @import</h2>
+<div>
+<pre>
+/* 当页面解析 import 时，其它的加载会停止，直到被加载的内容全部加载完毕 */
+@import url(more.css);
+@import url(andmore.css);
+
+a {
+    color: black;
+}
+</pre>
+</div>
+<h2>严禁使用 ID 选择器</h2>
+<div>
+<pre>
+#header a {
+    color: black;
+}
+</pre>
+</div>
+
+<h2>使用属性简写方式</h2>
+<div>
+<pre>
+.mybox {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.mybox {
+    margin: 20px 10px 30px;
+}
+</pre>
+</div>
+<h2>text-indent 使用负值</h2>
+<div>
+<pre>
+/* missing direction */
+.mybox {
+    text-indent: -999em;
+}
+
+/* direction is rtl */
+.mybox {
+    direction: rtl; /* 注意文字排列方向 */
+    text-indent: -999em;
+}
+</pre>
+</div>
+<h2>禁止使用通配符</h2>
+<div>
+<pre>
+.mybox * {
+    background: #fff;
+    color: #000;
+    background: rgba(255, 255, 255, 0.5);
+}
+</pre>
+</div>
+<h2>禁止使用不合格的属性值选择符</h2>
+<div>
+<pre>
+/* 和通配符类似，右边的都会被选中 */
+.mybox [type=text] {
+    background: #fff;
+    color: #000;
+    background: rgba(255, 255, 255, 0.5);
+}
+</pre>
+</div>
+<h2>浏览器前缀</h2>
+<div>
+<pre>
+/* missing standard property */
+.mybox {
+    -moz-border-radius: 5px;
+}
+
+/* standard property should come after vendor-prefixed property */
+.mybox {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+/* both vendor-prefix and standard property */
+.mybox {
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+</pre>
+</div>
+
+<h2>值为 0 时，不用带单位</h2>
+<div>
+<pre>
+/* 下面会提示 */
+.mybox {
+    margin: 0px;
+}
+
+.mybox {
+    width: 0%;
+}
+
+.mybox {
+    padding: 10px 0px;
+}
+/* 下面不会提示 */
+.mybox {
+    margin: 0;
+}
+
+.mybox {
+    padding: 10px 0;
+}
+</pre>
+</div>
+    </body>
+</html>
