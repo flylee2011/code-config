@@ -37,6 +37,8 @@
         "ga": true,
         "LEPass": true,
         "LETV": true,
+        "LeMe": true,
+        "LeMeJSBridge": true,
         "Job": true
     },
     // 插件
@@ -115,12 +117,12 @@
         }],
 
         /* 警告类，！！！待加入！！！ */
-        // 禁止 if 语句作为唯一语句出现在 else 语句块中（主观）
-        "no-lonely-if": 1,
         // 强制使用一致的缩进，使用空格缩进，1个tab=4个空格（主观）
         "indent": [1, 4],
         // 驼峰命名变量（主观）
         "camelcase": 1,
+        // 禁止 if 语句作为唯一语句出现在 else 语句块中（主观）
+        "no-lonely-if": 1,
         // var 语句应该在块级作用域范围之内
         "block-scoped-var": 1,
         // 禁止变量定义前使用
