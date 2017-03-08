@@ -48,7 +48,9 @@
         /* 对 ESLint 默认推荐规则的修改 */
         // 强制错误类，！！！重要规则！！！
         // 禁止出现未使用过的变量（不检查参数）
-        "no-unused-vars": [2, {"args": "none"}],
+        "no-unused-vars": [2, {
+            "args": "none"
+        }],
         // 禁止在嵌套的块中出现变量声明或 function 声明
         "no-inner-declarations": [2, "both"],
         // 警告类，！！！待加入！！！
@@ -93,18 +95,24 @@
         "no-multi-spaces": 2,
         // 语句大括号规则，所有语句不能省略大括号
         "curly": [2, "all"],
-        // 判断语句复杂度，限制10圈
-        "complexity": [2, 10],
+        // 判断语句复杂度，限制15圈
+        "complexity": [2, 15],
         // 强制在语句末尾使用分号（主观）
         "semi": [2, "always"],
         // 禁止使用拖尾逗号（主观）
         "comma-dangle": 2,
         // 强制块语句的最大可嵌套深度（主观）
-        "max-depth": [2, {"max": 6}],
+        "max-depth": [2, {
+            "max": 6
+        }],
         // 强制回调函数最大嵌套深度（主观）
-        "max-nested-callbacks": [2, {"max": 4}],
+        "max-nested-callbacks": [2, {
+            "max": 4
+        }],
         // 限制函数定义中最大参数个数，最多5个，超出要用 object 实现（主观）
-        "max-params": [2, {"max": 5}],
+        "max-params": [2, {
+            "max": 5
+        }],
 
         /* 警告类，！！！待加入！！！ */
         // 禁止 if 语句作为唯一语句出现在 else 语句块中（主观）
