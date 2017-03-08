@@ -1,15 +1,15 @@
 {
-  "name": "eslint-config",
-  "version": "1.0.0",
-  "description": "A example of eslint config",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "liyifei",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^3.16.1",
-    "eslint-plugin-react": "^6.10.0"
-  }
+    "name": "code-config",
+    "version": "1.0.0",
+    "description": "code config for team.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "liyifei",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^3.16.1",
+        "eslint-plugin-react": "^6.10.0"
+    }
 }

@@ -1,72 +1,89 @@
-// js-beautify 代码格式化配置
-// 官网、文档：http://jsbeautifier.org/, https://github.com/beautify-web/js-beautify
 {
-    // 通用
-    // 缩进4个空格
+    "_comment": "缩进4个空格",
     "indent_size": 4,
     "indent_char": " ",
-    // 不用 tab 缩进
+
+    "_comment": "不用 tab 缩进",
     "indent_with_tabs": false,
-    // unix 换行符
+
+    "_comment": "unix 换行符",
     "eol": "\n",
-    // 保留空行
+
+    "_comment": "保留空行",
     "preserve_newlines": true,
-    // 文件结尾加一行空行
+
+    "_comment": "文件结尾加一行空行",
     "end_with_newline": true,
 
-    // JS, JSON
     "js": {
-        // 大括号方式 - 折叠形式
+        "_comment": "大括号方式 - 折叠形式",
         "brace_style": "collapse",
-        // 缩进级别
+
+        "_comment": "缩进级别",
         "indent_level": 0,
-        // 括号两边的空格 - f( a, b ) vs f(a, b)
+
+        "_comment": "括号两边的空格 - f( a, b ) vs f(a, b)",
         "space_in_paren": false,
-        // 空括号两边的空格 - f(  ) vs f()
+
+        "_comment": "空括号两边的空格 - f(  ) vs f()",
         "space_in_empty_paren": false,
-        // 匿名函数后的空格 - function () vs function()
+
+        "_comment": "匿名函数后的空格 - function () vs function()",
         "space_after_anon_function": false,
-        // 条件判断前的空格 - if () vs if()
+
+        "_comment": "条件判断前的空格 - if () vs if()",
         "space_before_conditional": true,
-        // 数组缩进
+
+        "_comment": "数组缩进",
         "keep_array_indentation": false,
-        // 不允许用 eval
+
+        "_comment": "不允许用 eval",
         "eval_code": false,
-        // 关闭 jslint 严格模式
+
+        "_comment": "关闭 jslint 严格模式",
         "jslint_happy": false,
-        // 换行长度，0-关闭
+
+        "_comment": "换行长度，0-关闭",
         "wrap_line_length": 0,
-        // 在一个代码块最大保留3个空行
+
+        "_comment": "在一个代码块最大保留3个空行",
         "max_preserve_newlines": 3,
-        // 链式调用方法换行 - 不换行
+
+        "_comment": "链式调用方法换行 - 不换行",
         "break_chained_methods": false,
-        // 解码字符编码 - 不解码
+
+        "_comment": "解码字符编码 - 不解码",
         "unescape_strings": false
     },
 
-    // HTML
     "html": {
-        // Set brace_style
+        "_comment": "Set brace_style",
         "brace_style": "collapse",
-        // 缩进 <head> <body>
+
+        "_comment": "缩进 <head> <body>",
         "indent_inner_html": false,
-        // script 代码缩进
+
+        "_comment": "script 代码缩进",
         "indent_scripts": "normal",
-        // 属性缩进
+
+        "_comment": "属性缩进",
         "wrap_attributes": "auto",
-        // 设置某些标签，添加额外空行 - 默认head,body,/html
+
+        "_comment": "设置某些标签，添加额外空行 - 默认head,body,/html",
         "extra_liners": "",
-        // 在一个代码块最大保留3个空行
+
+        "_comment": "在一个代码块最大保留3个空行",
         "max_preserve_newlines": 3,
-        // 换行长度，0-关闭
+
+        "_comment": "换行长度，0-关闭",
         "wrap_line_length": 0
     },
 
-    // CSS
     "css": {
-        // 在规则之间添加换行 - 关闭
+        "_comment": "在规则之间添加换行 - 关闭",
         "newline_between_rules": false,
-        // 在选择器之间添加换行 - 关闭
+
+        "_comment": "在选择器之间添加换行 - 关闭",
         "selector_separator_newline": false
     }
 }
