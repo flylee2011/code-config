@@ -25,7 +25,8 @@
     // 代码格式化配置文件（该项目根据实际目录配置）
     "beautify.config": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.jsbeautifyrc.json",
     "beautify.language": {
-        "css": []
+        "css": [],
+        "html": []
     },
     // 关闭 vsc 自带的格式化
     "javascript.format.enable": false,
@@ -44,6 +45,6 @@
     "editor.scrollBeyondLastLine": false,
     // git 工具开关（VSC 独有）
     "git.enabled": true,
-    // 窗口缩放 - 关闭
-    "window.zoomLevel": 0
+    // 关闭编辑器的 html 格式化（VSC 独有）
+    "html.format.enable": false
 }

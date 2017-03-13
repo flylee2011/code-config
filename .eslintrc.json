@@ -38,6 +38,7 @@
         "LEPass": true,
         "LETV": true,
         "LeMe": true,
+        "LetvJSBridge": true,
         "LeMeJSBridge": true,
         "Job": true
     },
