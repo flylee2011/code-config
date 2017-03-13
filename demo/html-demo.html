@@ -29,6 +29,42 @@
 	<h2>6. 4个空格缩进</h2>
 	<p>使用4个空格代替制表符缩进。</p>
 	<h2>7. 注释规则</h2>
-	<p>模块通过 &lt;-- 模块名字 -- &gt; 开始，&lt;-- /模块名字 -- &gt 结束，状态切换注释在DOM切换处注释标注。</p>
+	<p>模块通过 &lt;-- 模块名字 -- &gt; 开始，&lt;-- /模块名字 -- &gt; 结束，状态切换注释在DOM切换处注释标注。</p>
+	<h2>8. 媒体查询</h2>
+	<h4>Tv</h4>
+	<p>
+		Tv端测试出的device-width有三种：device-width:1920px device-width:1280px device-width:960px;
+		UI输出的页面尺寸通常为1920*1080
+		在开发中是以device-width:960px开发的，需增加如下媒体查询条件适配另外两种情况：
+	</p>
+	<code>
+		<pre>
+	@media screen and (min-width:1280px) and (max-width:1919px){
+		html,body{font-size:83.3%;}
+	}
+	@media screen and (min-width:1920px){
+		html,body{font-size:125%;}
+	}
+		</pre>	
+	</code>
+	<h4>Mobile</h4>
+	<p>
+		通常移动端测试涵盖的设备范围是320-768px。可以理解为iPhone5--iPad的设备之间，安卓设备通常的最小webview是360px
+	</p>
+	<code>
+		<pre>
+	@media screen and (max-width:768px){
+		......
+	}
+		</pre>
+	</code>
+	<h2>9. 性能优化</h2>
+	<!-- <h4>与其告诉你结果不如带给你一个困境，思考的过程远比你知道的结果重要的多</h4> -->
+	<ul>
+		<li>减少请求数是优化不变的宗旨。请衡量开发、维护成本</li>
+		<li>图片压缩。jpg（大背景、照片）、png（需要透明、质量高）、gif。图片较多时请考虑懒加载 <a href="https://tinypng.com" target="_blank">线上压缩</a></li>
+		<li>合理的使用标签、结构</li>
+		<li>代码的复用及扩展性也是不能忽略的。好的复用及扩展可减少代码量，增强统一性</li>
+	</ul>
 </body>
 </html>
