@@ -20,6 +20,10 @@
     "highlight_line": true,
     // 换行符，统一 unix
     "default_line_ending": "unix",
+    // 在窗口可视区域自动换行
+    "word_wrap": "auto",
+    // 控制换行列数
+    "wrap_width": 120,
     // 字号（主观）
     "font_size": 16,
     // 忽略的插件（ST 独有）

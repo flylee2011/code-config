@@ -5,6 +5,7 @@
  */
 // 将设置放入此文件中以覆盖默认设置
 {
+    // 格式配置
     // 1个 tab 等于4个空格
     "editor.tabSize": 4,
     // 用空格替代 tab
@@ -21,22 +22,14 @@
     "editor.renderWhitespace": "all",
     // 高亮光标所在行
     "editor.renderLineHighlight": "all",
-    // beautify插件配置
-    // 代码格式化配置文件（该项目根据实际目录配置）
-    "beautify.config": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.jsbeautifyrc.json",
-    "beautify.language": {
-        "css": [],
-        "html": []
-    },
-    // 关闭 vsc 自带的格式化
-    "javascript.format.enable": false,
     // 启用保存文件自动格式化
     "editor.formatOnSave": true,
-    // ESLint 配置（该项根据实际目录配置）
-    "eslint.options": {
-        "configFile": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.eslintrc.json",
-        "ignorePath": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.eslintignore"
-    },
+    // 在窗口可视区域自动换行
+    "editor.wordWrap": "wordWrapColumn",
+    // 换行符，统一 unix
+    "files.eol": "\n",
+    // 控制换行列数（主观）
+    "editor.wordWrapColumn": 120,
     // 字号（主观）
     "editor.fontSize": 16,
     // 缩进参考线（主观）
@@ -46,5 +39,19 @@
     // git 工具开关（VSC 独有）
     "git.enabled": true,
     // 关闭编辑器的 html 格式化（VSC 独有）
-    "html.format.enable": false
+    "html.format.enable": false,
+
+    // 插件配置
+    // beautify插件配置
+    // 代码格式化配置文件（该项目根据实际目录配置）
+    "beautify.config": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.jsbeautifyrc.json",
+    "beautify.language": {
+        "css": [],
+        "html": []
+    },
+    // ESLint 配置（该项根据实际目录配置）
+    "eslint.options": {
+        "configFile": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.eslintrc.json",
+        "ignorePath": "/Users/yifei/cloud/mine/百度云同步盘/workspace/dev/tools/code-config/.eslintignore"
+    }
 }
