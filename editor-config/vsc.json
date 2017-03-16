@@ -22,12 +22,12 @@
     "editor.renderWhitespace": "all",
     // 高亮光标所在行
     "editor.renderLineHighlight": "all",
-    // 启用保存文件自动格式化
-    "editor.formatOnSave": true,
     // 在窗口可视区域自动换行
     "editor.wordWrap": "wordWrapColumn",
     // 换行符，统一 unix
     "files.eol": "\n",
+    // 启用保存文件自动格式化
+    "editor.formatOnSave": true,
     // 控制换行列数（主观）
     "editor.wordWrapColumn": 120,
     // 字号（主观）
@@ -36,9 +36,9 @@
     "editor.renderIndentGuides": true,
     // 控制编辑器是否可以滚动到最后一行之后 - 否（主观）
     "editor.scrollBeyondLastLine": false,
-    // git 工具开关（VSC 独有）
+    // git 工具开关（VSC）
     "git.enabled": true,
-    // 关闭编辑器的 html 格式化（VSC 独有）
+    // 关闭编辑器的 html 格式化（VSC）
     "html.format.enable": false,
 
     // 插件配置
