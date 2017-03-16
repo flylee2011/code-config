@@ -44,7 +44,7 @@
     },
     // 插件
     "plugins": [
-        "react"
+        // "react"
     ],
     // 规则
     "rules": {
