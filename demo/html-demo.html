@@ -30,7 +30,12 @@
 	<p>使用4个空格代替制表符缩进。</p>
 	<h2>7. 注释规则</h2>
 	<p>模块通过 &lt;-- 模块名字 -- &gt; 开始，&lt;-- /模块名字 -- &gt; 结束，状态切换注释在DOM切换处注释标注。</p>
-	<h2>8. 媒体查询</h2>
+	<h2>8. 浏览器favicon图标</h2>
+	<p>在移动端的H5页面中需要加上favicon的link标签，即使去掉浏览器还是会请求favicon，并且得到错误情况浪费请求时间。</p>
+	<code>
+		<pre> &lt;link rel="shortcut icon" href="http://www.le.com/favicon.ico"&gt; </pre>
+	</code>
+	<h2>9. 媒体查询</h2>
 	<h4>Tv</h4>
 	<p>
 		Tv端测试出的device-width有三种：device-width:1920px device-width:1280px device-width:960px;
@@ -58,7 +63,7 @@
 	}
 		</pre>
 	</code>
-	<h2>9. 性能优化</h2>
+	<h2>10. 性能优化</h2>
 	<!-- <h4>与其告诉你结果不如带给你一个困境，思考的过程远比你知道的结果重要的多</h4> -->
 	<ul>
 		<li>减少请求数是优化不变的宗旨。请衡量开发、维护成本</li>
